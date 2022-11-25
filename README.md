@@ -1,1 +1,1 @@
-главная страница + форма обратной связи
+ syntaxerror68.github.io/futures/ 
