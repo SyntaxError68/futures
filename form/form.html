@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container"> <!-- в этом контейнере будет храниться форма -->
+			<div class="content">
+				<div class="left-side"> <!-- левая колонка формы -->
+					<div class="address details">
+						<i class="fas fa-map-marker-alt"></i>
+						<div class="topic">Адрес:</div>
+						<div class="text-detail">г. Тамбов,</div>
+						<div class="text-detail">ул. Максима Горького, 17, <br>БЦ Галерея, <br> этаж 10, офис 102</div>
+					</div>
+					<div class="phone details">
+						<i class="fas fa-phone-alt"></i>
+						<div class="topic">Телефон:</div>
+						<div class="text-detail">+7 (4752) 50-40-45</div>
+						
+					</div>
+					<div class="calendar details">
+						<i class="fas fa-calendar-alt"></i>
+						<div class="topic">График работы:</div>
+						<div class="text-detail">Пн. 09:00-18:00</div>
+						<div class="text-detail">Вт. 09:00-18:00</div>
+						<div class="text-detail">Ср. 09:00-18:00</div>
+						<div class="text-detail">Чт. 09:00-18:00</div>
+						<div class="text-detail">Пт. 09:00-18:00</div>
+						<div class="text-detail" style="color:red;">Сб. Выходной</div>
+						<div class="text-detail" style="color:red;">Вс. Выходной</div>
+					</div>
+				</div>
+				<div class="right-side"> <!-- правая колонка формы -->
+					<div class="topic-text">Отправьте нам сообщение</div>
+					<p>
+						Если у Вас есть какие-либо вопросы или предложения по сотрудничеству - пожалуйста, заполните форму ниже
+					</p>
+					<form action="n" id="form" name="form">
+						<div class="input-box">
+							<input 
+								type="text" 
+								placeholder="Введите Ваше ФИО" 
+								id="name" 
+								name="name" 
+								data-reg="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$"
+							/>
+							<label for="name">В формате: Иванов Иван Иванович</label>
+						</div>
+						<div class="input-box">
+							<input 
+								type="text" 
+								placeholder="Введите Ваш город" 
+								id="city" 
+								name="city" 
+								data-reg="^[а-я]+(?:[- ][а-я]+)*$"
+							/>
+							<label for="city">В формате: Тамбов</label>
+						</div>
+						<div class="input-box">
+							<input 
+								type="text" 
+								placeholder="Введите Ваш телефон" 
+								id="phone" 
+								name="phone" 
+								data-reg="^((\+7|7|8)+([0-9]){10})$"
+							/>
+							<label for="phone">В формате: +79000000000, 79000000000, 89000000000</label>
+						</div>
+						<div class="input-box">
+							<input 
+								type="text" 
+								placeholder="Введите Ваш e-mail" 
+								id="email" 
+								name="email" 
+								data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+							/>
+							<label for="email">В формате: email@mail.com</label>
+						</div>
+						<div class="input-box message-box">
+							<textarea placeholder="Сообщение"></textarea>
+						</div>
+						<div class="button">
+							<input type="button" value="Отправить"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="https://kit.fontawesome.com/d3a8b40b53.js" crossorigin="anonymous"></script>
+		<script scr="app.js"></script>
+	</body>
+</html>
